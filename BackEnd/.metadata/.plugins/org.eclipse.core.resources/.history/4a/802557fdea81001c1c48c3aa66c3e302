@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.demo.project.exceptions;
+
+/**
+ * @author danie
+ *
+ */
+public class ResourceNotFoundExceptions {
+
+}

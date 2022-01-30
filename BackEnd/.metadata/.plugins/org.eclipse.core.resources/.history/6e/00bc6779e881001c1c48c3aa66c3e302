@@ -1,0 +1,40 @@
+/**
+ * 
+ */
+package com.demo.project.model;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Clase de la entidad riesgo con sus atributos
+ * @author Daniel Camacho Fonseca
+ *
+ */
+
+@Entity
+@Table(name = "PRI_MATRIZ_RIESGO")
+public class Riesgo {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
+	
+	private String nombre;
+	
+	private Date fecha_desde;
+	
+	private Date fecha_hasta;
+	
+	private String estado;
+	
+	private String usuario_auditoria;
+	
+	private Date fecha_auditoria;
+
+}

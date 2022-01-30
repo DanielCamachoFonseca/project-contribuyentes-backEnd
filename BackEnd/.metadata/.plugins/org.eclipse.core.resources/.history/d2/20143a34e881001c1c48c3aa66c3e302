@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package com.demo.project.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+/**
+ * Clase de la entidad riesgo con sus atributos
+ * @author Daniel Camacho Fonseca
+ *
+ */
+
+@Entity
+@Table(name = "PRI_MATRIZ_RIESGO")
+public class Riesgo {
+
+}

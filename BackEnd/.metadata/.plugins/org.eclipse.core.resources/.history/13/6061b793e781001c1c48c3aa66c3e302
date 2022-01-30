@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package com.demo.project.model;
+
+/**
+ * Clase de la entidad riesgo con sus atributos
+ * @author Daniel Camacho Fonseca
+ *
+ */
+public class Riesgo {
+
+}
