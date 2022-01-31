@@ -25,7 +25,6 @@ public class Riesgo {
 
 	@Id
 	@Column(name = "ID_MATRIZ_RIESGO")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "nombre", length = 60, nullable = false)
