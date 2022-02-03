@@ -9,7 +9,9 @@ import org.springframework.stereotype.Repository;
 import com.demo.project.entity.Riesgo;
 
 /**
- * @author danie
+ * Clase donde extiendo los metodos CRUD de Jpa Repository
+ * Version 1.0
+ * @author Daniel Camacho Fonseca
  *
  */
 
