@@ -12,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 /**
  * Clase que representa la entidad de la tabla de PRI_MATRIZ_RIESGO
  * Version 1.0
@@ -25,24 +27,27 @@ public class Riesgo {
 
 	@Id
 	@Column(name = "ID_MATRIZ_RIESGO")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
 	@Column(name = "nombre", length = 60, nullable = false)
 	private String nombre;
 
+	@JsonFormat(pattern="yyyy-MM-dd")
 	@Column(name = "fecha_desde", nullable = false)
 	private Date fecha_desde;
-
-	@Column(name = "fecha_hasta", nullable = false)
+	
+	@JsonFormat(pattern="yyyy-MM-dd")
+	@Column(name = "fecha_hasta")
 	private Date fecha_hasta;
 
-	@Column(name = "estado", length = 60, nullable = false)
+	@Column(name = "estado", length = 60)
 	private String estado;
 
-	@Column(name = "usuario_auditoria", length = 60, nullable = false)
+	@Column(name = "usuario_auditoria", length = 6)
 	private String usuario_auditoria;
 
-	@Column(name = "fecha_auditoria", nullable = false)
+	@Column(name = "fecha_auditoria")
 	private Date fecha_auditoria;
 
 	public Riesgo() {
