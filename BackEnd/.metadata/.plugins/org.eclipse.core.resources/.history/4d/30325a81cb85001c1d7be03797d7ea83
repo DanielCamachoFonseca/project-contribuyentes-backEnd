@@ -1,0 +1,60 @@
+/**
+ * 
+ */
+package com.demo.project.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Clase que representa la entidad de la tabla de PRI_VARIABLE
+ * Version 1.0
+ * @author Daniel Camacho Fonseca
+ *
+ */
+
+@Entity
+@Table(name = "PRI_VARIABLE")
+public class Variable {
+	
+	@Id 
+	@Column  (name = "ID_VARIABLE")
+	@GeneratedValue (strategy = GenerationType .IDENTITY)
+	private Long id;
+	
+	@Column(name = "NOMBRE", length = 200, nullable = false)
+	private String nombre;
+	
+	
+	@Column(name = "FUENTE_SISTEMA", length = 200, nullable = false)
+	private String fuente_sistema;
+	
+	@Column(name = "FUENTE_INFORMACION", length = 200, nullable = false)
+	private String fuente_informacion;
+	
+	@Column(name = "FORMULA", length = 200, nullable = false)
+	private String formula;
+	
+	@Column(name = "PERIODICIDAD", length = 100, nullable = false)
+	private String periodicidad;
+	
+	@Column(name = "PROCEDIMIENTO_BASE_DATOS", length = 60)
+	private String procedimiento_base_datos;
+	
+	@Column(name = "ESTADO", length = 60)
+	private String estado;
+	
+	@Column(name = "USUARIO_AUDITORIA", length = 60)
+	private String usuario_auditoria;
+	
+	@Column(name = "fecha_auditoria")
+	private Date fecha_auditoria;
+	
+
+}

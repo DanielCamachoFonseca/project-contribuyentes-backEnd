@@ -91,9 +91,6 @@ public class Segmento {
 
 	public void setFecha_auditoria(Date fecha_auditoria) {
 		this.fecha_auditoria = fecha_auditoria;
-	}
-	
-	
-	
+	}	
 
 }
