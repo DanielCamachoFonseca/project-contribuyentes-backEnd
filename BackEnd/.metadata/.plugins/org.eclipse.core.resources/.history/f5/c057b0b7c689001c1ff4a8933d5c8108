@@ -1,0 +1,72 @@
+/**
+ * 
+ */
+package com.demo.project.entity;
+
+import java.sql.Date;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+/**
+ * Clase que representa la entidad de la tabla de PRI_PERFIL_VARIABLE
+ * Version 1.0
+ * @author Daniel Camacho Fonseca
+ *
+ */
+
+@Entity
+@Table(name = "VIS_MATRIZ_RIESGO_CUADRANTE")
+public class RiesgoCuadrante {
+	
+	@Id
+	@Column (name = "ID_MATRIZ_RIESGO_CUADRANTE")
+	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	private Long id_matriz_riesgo_cuadrante;
+	
+	
+	@ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH, CascadeType.REFRESH})
+	@JoinColumn (name = "ID_MATRIZ_RIESGO")
+	private Long id_matriz_riesgo;
+	
+	@Column (name = "NOMBRE_MATRIZ")
+	private String nombre_matriz;
+	
+	@Column (name = "NUMERO_CUADRANTE")
+	private Long numero_cuadrante;
+	
+	@Column(name = "VALOR_EJE_X_DESDE")
+	private Double valor_eje_x_desde;
+	
+	@Column(name = "VALOR_EJE_X_HASTA")
+	private Double valor_eje_x_hasta;
+	
+	@Column(name = "VALOR_EJE_Y_DESDE")
+	private Double valor_eje_y_desde;
+	
+	@Column(name = "VALOR_EJE_Y_HASTA")
+	private Double valor_eje_y_hasta;
+	
+	@Column(name = "COLOR")
+	private String color;
+	
+	@Column(name = "ESTADO")
+	private String estado;
+	
+	@Column(name = "USUARIO_AUDITORIA")
+	private String usuario_auditoria;
+	
+	@Column(name = "FECHA_AUDITORIA")
+	private Date fecha_auditoria;	
+	
+	
+	
+
+}

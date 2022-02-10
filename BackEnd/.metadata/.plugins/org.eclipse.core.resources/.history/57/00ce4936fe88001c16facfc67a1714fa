@@ -1,0 +1,86 @@
+/**
+ * 
+ */
+package com.demo.project.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * Clase que representa la entidad de la tabla de PRI_PERFIL_VARIABLE
+ * Version 1.0
+ * @author Daniel Camacho Fonseca
+ *
+ */
+
+@Entity
+@Table(name = "VIS_PERFIL")
+public class Perfil {
+	
+	@Id
+	@Column (name = "ID_PERFIL")
+	@GeneratedValue (strategy = GenerationType .IDENTITY)
+	private Integer id_perfil;
+	
+	@Column (name = "NIT")
+	private String nit;
+	
+	@Column (name = "PERIODO")
+	private Integer periodo;
+	
+	@Column (name = "ID_MATRIZ_RIESGO")
+	private Integer matriz_riesgo_id;
+	
+	@Column (name = "NOMBRE_MATRIZ")
+	private Integer nombre_matriz;
+	
+	@Column (name = "ID_SEGMENTO")
+	private Integer segmento_id;
+	
+	@Column (name = "NOMBRE_SEGMENTO")
+	private Integer nombre_segmento;
+	
+	@Column(name = "FECHA_DESDE")
+	private Date fecha_desde;
+	
+	@Column(name = "PESO")
+	private Integer peso;
+	
+	@Column(name = "VALOR_PERFIL")
+	private Integer valor_perfil;
+	
+	@Column(name = "VALOR_EJE_X")
+	private Integer valor_eje_x;
+	
+	@Column(name = "VALOR_EJE_Y")
+	private Integer valor_eje_y;
+	
+	@Column(name = "VALOR_INCUMPLIMIENTO")
+	private Integer valor_incumplimiento;
+	
+	@Column(name = "VALOR_LOG")
+	private Integer valor_log;
+	
+	@Column(name = "NUMERO_CUADRANTE")
+	private Integer numero_cuadrante;
+	
+	@Column(name = "USUARIO_AUDITORIA")
+	private String usuario_auditoria;
+	
+	@Column(name = "FECHA_AUDITORIA")
+	private Date fecha_auditoria;
+
+	public Perfil() {
+		
+	}
+	
+	
+	
+	
+}

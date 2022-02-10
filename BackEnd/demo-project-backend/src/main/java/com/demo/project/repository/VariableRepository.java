@@ -1,6 +1,7 @@
 package com.demo.project.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 import com.demo.project.entity.Variable;
 
@@ -10,6 +11,7 @@ import com.demo.project.entity.Variable;
  * @author Daniel Camacho Fonseca
  *
  */
+@Repository
 public interface VariableRepository extends JpaRepository<Variable, Long> {
 
 }

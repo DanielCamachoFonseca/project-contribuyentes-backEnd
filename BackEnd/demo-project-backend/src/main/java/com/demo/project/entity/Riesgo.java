@@ -4,15 +4,19 @@
 package com.demo.project.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * Clase que representa la entidad de la tabla de PRI_MATRIZ_RIESGO
@@ -49,10 +53,16 @@ public class Riesgo {
 
 	@Column(name = "fecha_auditoria")
 	private Date fecha_auditoria;
-
+	
+	@OneToMany(mappedBy="id_matriz_riesgo", fetch = FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private List<RiesgoCuadrante> RiesgoCuadrantes;
+		
+	
 	public Riesgo() {
 
 	}
+	
 
 	public Riesgo(Long id, String nombre, Date fecha_desde, Date fecha_hasta, String estado, String usuario_auditoria,
 			Date fecha_auditoria) {
@@ -121,5 +131,7 @@ public class Riesgo {
 	public void setFecha_auditoria(Date fecha_auditoria) {
 		this.fecha_auditoria = fecha_auditoria;
 	}
+	
+	
 
 }

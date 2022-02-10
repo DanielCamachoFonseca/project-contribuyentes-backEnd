@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.demo.project.entity;
+
+/**
+ * @author danie
+ *
+ */
+public class PerfilVariable {
+
+}
