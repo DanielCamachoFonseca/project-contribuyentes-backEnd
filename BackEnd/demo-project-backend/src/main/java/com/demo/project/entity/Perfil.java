@@ -13,7 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**
- * Clase que representa la entidad de la tabla de PRI_PERFIL_VARIABLE
+ * Clase que representa la entidad de la tabla de VIS_PERFIL
  * Version 1.0
  * @author Daniel Camacho Fonseca
  *

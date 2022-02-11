@@ -4,13 +4,18 @@
 package com.demo.project.entity;
 
 import java.sql.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * Clase que representa la entidad de la tabla de PRI_VARIABLE
@@ -20,13 +25,13 @@ import javax.persistence.Table;
  */
 
 @Entity
-@Table(name = "PRI_VARIABLE")
+@Table(name = "VIS_VARIABLE")
 public class Variable {
 	
 	@Id 
-	@Column  (name = "ID_VARIABLE")
+	@Column(name = "ID_VARIABLE")
 	@GeneratedValue (strategy = GenerationType .IDENTITY)
-	private Long id;
+	private Long id_variable;
 	
 	@Column(name = "NOMBRE", length = 200, nullable = false)
 	private String nombre;
@@ -55,17 +60,21 @@ public class Variable {
 	
 	@Column(name = "fecha_auditoria")
 	private Date fecha_auditoria;
+	
+	@OneToMany(mappedBy="id_variable", fetch = FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private List<Variable> Variables;
 
 	public Variable() {
 	
 	}
 	
 	
-	public Variable(Long id, String nombre, String fuente_sistema, String fuente_informacion, String formula,
+	public Variable(Long id_variable, String nombre, String fuente_sistema, String fuente_informacion, String formula,
 			String periodicidad, String procedimiento_base_datos, String estado, String usuario_auditoria,
 			Date fecha_auditoria) {
 		super();
-		this.id = id;
+		this.id_variable = id_variable;
 		this.nombre = nombre;
 		this.fuente_sistema = fuente_sistema;
 		this.fuente_informacion = fuente_informacion;
@@ -79,12 +88,12 @@ public class Variable {
 
 
 
-	public Long getId() {
-		return id;
+	public Long getId_variable() {
+		return id_variable;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId_variable(Long id_variable) {
+		this.id_variable = id_variable;
 	}
 
 	public String getNombre() {

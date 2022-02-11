@@ -18,7 +18,7 @@ import javax.persistence.Table;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
- * Clase que representa la entidad de la tabla de PRI_PERFIL_VARIABLE
+ * Clase que representa la entidad de la tabla de PRI_MATRIZ_RIESGO_CUADRANTE
  * Version 1.0
  * @author Daniel Camacho Fonseca
  *

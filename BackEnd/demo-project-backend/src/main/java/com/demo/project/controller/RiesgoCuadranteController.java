@@ -45,7 +45,7 @@ public class RiesgoCuadranteController {
 	
 	
 	@GetMapping("/consultarRiesgoCuadrante")
-	public List<RiesgoCuadrante> ListarFuenteInformacion(){
+	public List<RiesgoCuadrante> ListarRiesgoCuadrante(){
 		return repository.findAll();
 	}
 			

@@ -32,7 +32,7 @@ public class Riesgo {
 	@Id
 	@Column(name = "ID_MATRIZ_RIESGO")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private Long id_matriz_riesgo;
 
 	@Column(name = "nombre", length = 60, nullable = false)
 	private String nombre;
@@ -57,6 +57,10 @@ public class Riesgo {
 	@OneToMany(mappedBy="id_matriz_riesgo", fetch = FetchType.LAZY)
 	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 	private List<RiesgoCuadrante> RiesgoCuadrantes;
+	
+	@OneToMany(mappedBy="id_matriz_riesgo", fetch = FetchType.LAZY)
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+	private List<RiesgoVariable> RiesgoVariables;
 		
 	
 	public Riesgo() {
@@ -64,10 +68,10 @@ public class Riesgo {
 	}
 	
 
-	public Riesgo(Long id, String nombre, Date fecha_desde, Date fecha_hasta, String estado, String usuario_auditoria,
+	public Riesgo(Long id_matriz_riesgo, String nombre, Date fecha_desde, Date fecha_hasta, String estado, String usuario_auditoria,
 			Date fecha_auditoria) {
 		super();
-		this.id = id;
+		this.id_matriz_riesgo = id_matriz_riesgo;
 		this.nombre = nombre;
 		this.fecha_desde = fecha_desde;
 		this.fecha_hasta = fecha_hasta;
@@ -76,12 +80,12 @@ public class Riesgo {
 		this.fecha_auditoria = fecha_auditoria;
 	}
 
-	public Long getId() {
-		return id;
+	public Long getId_matriz_riesgo() {
+		return id_matriz_riesgo;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public void setId_matriz_riesgo(Long id_matriz_riesgo) {
+		this.id_matriz_riesgo = id_matriz_riesgo;
 	}
 
 	public String getNombre() {
