@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 
 @Entity
-@Table(name = "VIS_VARIABLE")
+@Table(name = "PRI_VARIABLE")
 public class Variable {
 	
 	@Id 
