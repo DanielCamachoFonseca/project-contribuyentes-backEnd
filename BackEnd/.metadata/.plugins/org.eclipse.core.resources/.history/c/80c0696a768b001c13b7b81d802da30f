@@ -1,0 +1,23 @@
+package com.demo.project.repository.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.demo.project.entity.PerfilVariable;
+import com.demo.project.repository.PerfilVariableRepository;
+import com.demo.project.repository.service.IPerfilVariable;
+
+@Service
+public class PerfilVariableServiceImpl implements IPerfilVariable {
+	
+	@Autowired
+	private PerfilVariableRepository repository;
+	
+	@Override
+	public List<PerfilVariable> buscarPorPerfilId(Long id) {
+		return repository.findByIdPerfil(id);
+	}
+
+}

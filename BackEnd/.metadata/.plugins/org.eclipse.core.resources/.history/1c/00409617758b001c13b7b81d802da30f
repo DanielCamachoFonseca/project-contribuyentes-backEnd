@@ -1,0 +1,5 @@
+package com.demo.project.repository.service;
+
+public interface IPerfilVariable {
+
+}

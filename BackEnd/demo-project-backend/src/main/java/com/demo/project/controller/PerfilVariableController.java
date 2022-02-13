@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.demo.project.entity.PerfilVariable;
 import com.demo.project.repository.PerfilVariableRepository;
+
 
 /**
  * Clase que establece todas las rutas de la api y sus funcionalidades 
@@ -29,9 +29,11 @@ public class PerfilVariableController {
 	@Autowired 
 	private PerfilVariableRepository repository;
 	
+
 	@GetMapping("/consultarPerfilVariable")
 	public List<PerfilVariable> ListarPerfilVariable(){
 		return repository.findAll();
 	}
+		
 	
 }

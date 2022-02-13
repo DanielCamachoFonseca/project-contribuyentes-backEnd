@@ -1,0 +1,16 @@
+package com.demo.project.repository.service.impl;
+
+import java.util.List;
+
+import com.demo.project.entity.PerfilVariable;
+import com.demo.project.repository.service.IPerfilVariable;
+
+public class PerfilVariableServiceImpl implements IPerfilVariable {
+
+	@Override
+	public List<PerfilVariable> buscarPorPerfilId(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
